@@ -1,10 +1,10 @@
-AI Semantic Research Paper Analysis Engine
+# AI Semantic Research Paper Analysis Engine
 
 An AI-powered semantic search and research paper analysis system that retrieves contextually relevant research papers based on meaning rather than exact keyword matching. The project leverages Transformer-based sentence embeddings, FAISS vector indexing, keyword extraction, Named Entity Recognition (NER), abstractive summarization, and explainable semantic recommendations to enable intelligent research paper discovery and analysis.
 
 ---
 
-Features
+## Features
 
 - Semantic search over Machine Learning research papers using Transformer embeddings
 - Retrieval of contextually similar papers beyond exact keyword matching
@@ -20,34 +20,32 @@ Features
 
 ---
 
-Dataset
+## Dataset
 
-- Dataset: "CShorten/ML-ArXiv-Papers"
-- Source: Hugging Face Datasets
-- Papers Used: First 15,000 Machine Learning research papers
-- Data Fields:
-  - Title
-  - Abstract
-  - Combined Paper Text (Title + Abstract)
+- **Dataset:** `CShorten/ML-ArXiv-Papers`
+- **Source:** Hugging Face Datasets
+- **Papers Used:** First **15,000 Machine Learning research papers**
+
+### Data Fields
+- Title
+- Abstract
+- Combined Paper Text (Title + Abstract)
 
 ---
 
-Tech Stack
+## Tech Stack
 
-Programming Language
-
+### Programming Language
 - Python
 
-NLP & Deep Learning Models
-
-- Sentence Transformers ("all-MiniLM-L6-v2")
+### NLP & Deep Learning Models
+- Sentence Transformers (`all-MiniLM-L6-v2`)
 - Hugging Face Transformers
-- BART ("facebook/bart-large-cnn")
-- BERT-based Named Entity Recognition ("dslim/bert-base-NER")
+- BART (`facebook/bart-large-cnn`)
+- BERT-based Named Entity Recognition (`dslim/bert-base-NER`)
 - KeyBERT
 
-Libraries & Frameworks
-
+### Libraries & Frameworks
 - Pandas
 - NumPy
 - Scikit-learn
@@ -60,7 +58,7 @@ Libraries & Frameworks
 
 ---
 
-AI Techniques Used
+## AI Techniques Used
 
 - Semantic Search
 - Sentence Embeddings
@@ -74,13 +72,13 @@ AI Techniques Used
 
 ---
 
-Project Workflow
+## Project Workflow
 
-1. Load the "ML-ArXiv-Papers" dataset from Hugging Face.
+1. Load the `ML-ArXiv-Papers` dataset from Hugging Face.
 2. Extract paper titles and abstracts.
 3. Create a combined paper representation by concatenating the title and abstract.
 4. Preprocess and clean the text data.
-5. Generate semantic embeddings using the "all-MiniLM-L6-v2" Sentence Transformer model.
+5. Generate semantic embeddings using the `all-MiniLM-L6-v2` Sentence Transformer model.
 6. Store embeddings as NumPy arrays for reuse.
 7. Normalize embeddings and create a FAISS vector index.
 8. Convert user queries into semantic embeddings.
@@ -92,8 +90,9 @@ Project Workflow
 
 ---
 
-Project Structure
+## Project Structure
 
+```text
 AI-Semantic_Research_Paper_Analysis/
 │
 ├── CBSOT_project_2.ipynb
@@ -101,14 +100,17 @@ AI-Semantic_Research_Paper_Analysis/
 ├── paper_faiss.index
 ├── README.md
 └── .gitignore
+```
 
 ---
 
-Example Query
+## Example Query
 
+```python
 query = "deep learning for medical image analysis"
+```
 
-Output Includes
+### Output Includes
 
 - Research Paper Title
 - Similarity Score
@@ -120,7 +122,7 @@ Output Includes
 
 ---
 
-Applications
+## Applications
 
 - Semantic Academic Search Engines
 - Intelligent Research Paper Recommendation Systems
@@ -130,10 +132,13 @@ Applications
 - Research Trend Analysis
 - AI-assisted Research Exploration Platforms
 
+
+
 ---
 
+## Author
 
-Author
+**Vaishnavi Vashisht**  
 
-Vaishnavi Vashisht
+
 
