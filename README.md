@@ -1,99 +1,139 @@
-# AI Semantic Research Paper Analysis Engine
+AI Semantic Research Paper Analysis Engine
 
-An AI-powered semantic search and research paper analysis engine that retrieves contextually relevant research papers based on meaning rather than exact keyword matching. The system combines Transformer-based semantic embeddings, FAISS indexing, keyword extraction, Named Entity Recognition (NER), and LangChain-powered NLP pipelines to provide intelligent research paper retrieval and analysis.
+An AI-powered semantic search and research paper analysis system that retrieves contextually relevant research papers based on meaning rather than exact keyword matching. The project leverages Transformer-based sentence embeddings, FAISS vector indexing, keyword extraction, Named Entity Recognition (NER), abstractive summarization, and explainable semantic recommendations to enable intelligent research paper discovery and analysis.
 
 ---
 
-## Features
+Features
 
-- Semantic search over research papers using Transformer embeddings
-- High-speed similarity search with FAISS indexing
-- Context-aware retrieval beyond keyword matching
-- Keyword extraction and analysis for important research concepts
-- Named Entity Recognition (NER) for title-based analysis of research papers
-- Interactive query-based search interface
-- Efficient storage and retrieval using pre-computed embeddings
+- Semantic search over Machine Learning research papers using Transformer embeddings
+- Retrieval of contextually similar papers beyond exact keyword matching
+- High-speed vector similarity search using FAISS indexing
+- Cosine similarity-based ranking of research papers
+- Automatic generation and storage of embeddings for efficient retrieval
+- Keyword extraction using KeyBERT for identifying important research concepts
+- Named Entity Recognition (NER) using BERT for title and abstract analysis
+- Abstractive summarization of research paper abstracts using BART
+- Explainable semantic recommendations by highlighting concepts shared between the query and retrieved papers
 - Top-K research paper recommendation system
-- Modular NLP pipeline powered by LangChain and Hugging Face
+- Modular NLP pipeline with LangChain integration
 
 ---
 
-## Tech Stack
+Dataset
 
-### Programming Language
+- Dataset: "CShorten/ML-ArXiv-Papers"
+- Source: Hugging Face Datasets
+- Papers Used: First 15,000 Machine Learning research papers
+- Data Fields:
+  - Title
+  - Abstract
+  - Combined Paper Text (Title + Abstract)
+
+---
+
+Tech Stack
+
+Programming Language
+
 - Python
 
-### NLP & Machine Learning
-- Sentence Transformers (`all-MiniLM-L6-v2`)
-- Hugging Face Transformers
-- Named Entity Recognition (NER)
-- Semantic Embeddings
-- Keyword Analysis and Extraction
-- Natural Language Processing (NLP)
+NLP & Deep Learning Models
 
-### Frameworks & Libraries
-- LangChain
+- Sentence Transformers ("all-MiniLM-L6-v2")
+- Hugging Face Transformers
+- BART ("facebook/bart-large-cnn")
+- BERT-based Named Entity Recognition ("dslim/bert-base-NER")
+- KeyBERT
+
+Libraries & Frameworks
+
+- Pandas
+- NumPy
+- Scikit-learn
 - FAISS (Facebook AI Similarity Search)
 - Transformers
 - Sentence-Transformers
-- NumPy
-- Jupyter Notebook
-
-### AI Techniques Used
-- Semantic Search
-- Vector Embeddings
-- Similarity Scoring
-- Top-K Information Retrieval
-- Keyword Analysis
-- Named Entity Recognition (NER)
+- LangChain
+- Hugging Face Datasets
+- Jupyter Notebook / Google Colab
 
 ---
 
-## Project Structure
+AI Techniques Used
 
-```text
-AI-Semantic_Research_PaperAnalysis/
+- Semantic Search
+- Sentence Embeddings
+- Vector Similarity Search
+- Cosine Similarity Scoring
+- Top-K Information Retrieval
+- Keyword Extraction and Analysis
+- Named Entity Recognition (NER)
+- Abstractive Text Summarization
+- Explainable AI (XAI) for Semantic Recommendations
+
+---
+
+Project Workflow
+
+1. Load the "ML-ArXiv-Papers" dataset from Hugging Face.
+2. Extract paper titles and abstracts.
+3. Create a combined paper representation by concatenating the title and abstract.
+4. Preprocess and clean the text data.
+5. Generate semantic embeddings using the "all-MiniLM-L6-v2" Sentence Transformer model.
+6. Store embeddings as NumPy arrays for reuse.
+7. Normalize embeddings and create a FAISS vector index.
+8. Convert user queries into semantic embeddings.
+9. Retrieve the Top-K most relevant research papers using cosine similarity search.
+10. Generate summaries of retrieved paper abstracts using BART.
+11. Extract important keywords and key phrases using KeyBERT.
+12. Perform Named Entity Recognition using BERT-based NER models.
+13. Provide explainable recommendations by identifying shared concepts between the query and retrieved papers.
+
+---
+
+Project Structure
+
+AI-Semantic_Research_Paper_Analysis/
 │
-├── CBSOT_project_2 (1).ipynb
+├── CBSOT_project_2.ipynb
 ├── paper_embeddings.npy
 ├── paper_faiss.index
 ├── README.md
 └── .gitignore
-```
 
 ---
 
-## How It Works
+Example Query
 
-1. Load and preprocess the research paper dataset.
-2. Generate semantic embeddings using Sentence Transformers and Hugging Face models.
-3. Store embeddings as NumPy arrays.
-4. Build a FAISS index for efficient vector similarity search.
-5. Process the user's query through the LangChain-powered NLP pipeline.
-6. Convert the query into semantic embeddings.
-7. Retrieve the Top-K most relevant research papers using FAISS similarity search.
-8. Perform keyword extraction and analysis on the retrieved papers.
-9. Apply Named Entity Recognition (NER) for title-based entity analysis.
-10. Display the paper title, abstract, extracted keywords, identified entities, and similarity scores.
+query = "deep learning for medical image analysis"
+
+Output Includes
+
+- Research Paper Title
+- Similarity Score
+- Paper Abstract
+- Generated Summary
+- Extracted Keywords
+- Named Entities
+- Explanation of Why the Paper Was Recommended
 
 ---
 
-## Applications
+Applications
 
-- Academic Search Engines
+- Semantic Academic Search Engines
 - Intelligent Research Paper Recommendation Systems
 - Literature Review Automation
 - Scientific Knowledge Discovery
 - NLP-based Document Retrieval Systems
 - Research Trend Analysis
-
-
-
-
-
+- AI-assisted Research Exploration Platforms
 
 ---
 
-## Author
 
-**Vaishnavi Vashisht**  
+Author
+
+Vaishnavi Vashisht
+
